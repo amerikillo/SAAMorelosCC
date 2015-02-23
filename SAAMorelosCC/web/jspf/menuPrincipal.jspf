@@ -1,0 +1,143 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span clss="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/SAA/main_menu.jsp">Inicio</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entradas<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <%
+                            if (tipo.equals("2") || tipo.equals("3") || tipo.equals("1")) {
+                        %>
+
+                        <li><a href="/SAA/captura.jsp">Entrada Manual</a></li>
+                        <li><a href="/SAA/compraAuto2.jsp">Entrada Automática OC ISEM</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/SAA/hh/compraAuto3.jsp">HANDHELD | Entrada Automática OC ISEM</a></li>
+                        <li class="divider"></li>
+                            <%
+                                }
+                                if (tipo.equals("2") || tipo.equals("3") || tipo.equals("5")) {
+                            %>
+                        <li><a href="/SAA/verificarCompraAuto.jsp">Verificar OC</a></li>
+                            <%
+                                }
+                            %>
+                        <li><a href="#" onclick="window.open('/SAA/reimpresion.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Reimpresión de Compras</a></li>
+                        <li><a href="#"  onclick="window.open('/SAA/ordenesCompra.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Órdenes de Compras</a></li>
+                        <li><a href="#"  onclick="window.open('/SAA/kardexClave.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Kardex Claves</a></li>
+                        <li><a href="#"  onclick="window.open('/SAA/hh/ubicacionesConsultas.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Ubicaciones</a></li>
+                        <li><a href="#"  onclick="window.open('/SAA/creaMarbetes.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Generar Marbetes</a></li>
+
+                        <%
+                            if (tipo.equals("5") || tipo.equals("3")) {
+                        %>
+                        <li class="divider"></li>
+                        <li><a href="/SAA/hh/insumoNuevoRedist.jsp">Redistribución HH</a></li>
+                        <li class="divider"></li>
+                            <%
+                                }
+                            %>
+                            <%
+                                if (usua.equals("oscar")) {
+                            %>
+                        <li class="divider"></li>
+                        <li><a href="#"  onclick="window.open('/SAA/devolucionesInsumo.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Cambio Físico</a></li>
+                        <li class="divider"></li>
+                            <%
+                                }
+                            %>
+                        <li><a href="#"  onclick="window.open('/SAA/modula/avisosIngreso.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Modula - Avisos de Ingreso</a></li>
+                        <li><a href="#"  onclick="window.open('/SAA/Ubicaciones/index_Marbete.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Marbete de Salida</a></li>
+                        <li><a href="#"  onclick="window.open('/SAA/Ubicaciones/index_Marbete_resto.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Marbete de Resto</a></li>
+                        <!--li><a href="#"  onclick="window.open('verDevolucionesEntrada.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Imprimir Devoluciones</a></li>
+                        <li><a href="#"  onclick="window.open('devolucionesInsumo.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Devolver</a></li-->
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Facturación<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <%
+                            if (tipo.equals("7") || tipo.equals("3")) {
+                        %>
+                        <li><a href="/SAA/requerimiento.jsp">Carga de Requerimiento</a></li>
+                        <li><a href="/SAA/factura.jsp">Facturación Automática</a></li>
+                            <%
+                                }
+                            %>
+                            <%
+                                if (tipo.equals("5") || tipo.equals("3") || tipo.equals("7") || tipo.equals("2")) {
+                            %>
+                        <li><a href="/SAA/validacionSurtido.jsp">Validación Surtido</a></li>
+                        <li><a href="/SAA/validacionAuditores.jsp">Validación Auditores</a></li>
+                            <%
+                                }
+                            %>
+                            <%
+                                if (tipo.equals("7")) {
+                            %>
+                        <li><a href="/SAA/remisionarCamion.jsp">Generar Remisiones</a></li>
+                        <li><a href="/SAA/facturacionManual.jsp">Facturación Manual</a></li>
+                            <%
+                                }
+                            %>
+                        <li><a href="#"  onclick="window.open('/SAA/verDevoluciones.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Devoluciones</a></li>
+                        <li><a href="#"  onclick="window.open('modula/modulaHistorico.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Histórico Modula</a></li>
+                        <li><a href="/SAA/reimp_factura.jsp">Administrar Remisiones</a></li>
+                        <li><a href="/SAA/reimpConcentrado.jsp">Reimpresión Concentrados Globales</a></li>
+                        <li><a href="/SAA/comparativoGlobal.jsp">Comparativo Global</a></li>
+
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inventario<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"  onclick="window.open('/SAA/Ubicaciones/Inventario.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Inventario</a></li>
+                            <%
+                                if (tipo.equals("5") || tipo.equals("3") || tipo.equals("7") || tipo.equals("2")) {
+                            %>
+                        <li><a href="#"  onclick="window.open('/SAA/movimientosUsuarioInventario.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Movimientos por Usuario</a></li>
+                        <li><a href="#"  onclick="window.open('/SAA/semaforo.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Semaforización</a></li>
+                            <%
+                                }
+                            %>
+                        <li><a href="#"  onclick="window.open('/SAA/invenCiclico/nuevoInventario.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Inventario Ciclico</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Catálogos<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" onclick="window.open('/SAA/medicamento.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Catálogo de Medicamento</a></li>
+                        <li><a href="#" onclick="window.open('/SAA/catalogo.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Catálogo de Proveedores</a></li>
+                        <li><a href="#" onclick="window.open('/SAA/marcas.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Catálogo de Marcas</a></li>
+                        <li><a href="#" onclick="window.open('/SAA/catalogoUnidades.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Catálogo de Unidades</a></li>
+                        <li><a href="#" onclick="window.open('/SAA/modula/catalogoCB.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Catálogo de CB</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" onclick="window.open('/SAA/Entrega.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Fecha de Recibo en CEDIS</a></li> 
+                        <li><a href="#" onclick="window.open('/SAA/historialOC.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Historial OC</a></li>
+                        <li><a href="#" onclick="window.open('/SAA/ReporteF.jsp', '', 'width=1200,height=800,left=50,top=50,toolbar=no')">Reporte por Fecha Proveedor</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=usua%></a></li>
+                <li class="active"><a href="/SAA/index.jsp"><span class="glyphicon glyphicon-log-out"></span></a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
