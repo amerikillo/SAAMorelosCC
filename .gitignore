@@ -44,3 +44,7 @@ Temporary Items
 
 *.class
 *.war
+SAAMorelosCC/build
+SAAMorelosCC/dist
+/SAAMorelosCC/build
+/SAAMorelosCC/dist

@@ -213,12 +213,7 @@
             </form>
         </div>
         <br><br><br>
-        <div class="navbar navbar-fixed-bottom navbar-inverse">
-            <div class="text-center text-muted">
-                GNK Logística || Desarrollo de Aplicaciones 2009 - 2014 <span class="glyphicon glyphicon-registration-mark"></span><br />
-                Todos los Derechos Reservados
-            </div>
-        </div> 
+        <%@include file="jspf/piePagina.jspf"%>
         <!-- 
     ================================================== -->
         <!-- Se coloca al final del documento para que cargue mas rapido -->

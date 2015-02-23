@@ -36,7 +36,7 @@
                 <!--label for="username" class="uname" data-icon="u" > Your email or username </label-->
                 <div class="row">
                     <div class="col-md-4"><img src="imagenes/GNKL_Small.JPG" ></div>
-                    <div class="col-md-8"><h2>Validar Usuario</h2></div>
+                    <div class="col-md-8"><h2>SAA - Morelos Compra Consolidada</h2></div>
 
                 </div>
 
